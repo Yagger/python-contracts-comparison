@@ -25,7 +25,7 @@ Disclaimer about metaprogramming: while it's definitely doable to metaprogram th
 |Runtime checking|Yes (will fail at initialization)|No (will pass initialization and only fail at using the missing method)|
 |Static checking|Yes|Yes|
 |Can enforce both methods and properties|Methods only|Both|
-|(Callback interface)[https://mypy.readthedocs.io/en/stable/protocols.html#callback-protocols]|No|Yes|
+|[Callback interface](https://mypy.readthedocs.io/en/stable/protocols.html#callback-protocols)|No|Yes|
 |Lines of code|More|Less (no decorators)|
 |Composable|Yes (via multiple inheritance, but here it's ok)|Yes (via multiple inheritance, but here it's ok)|
 
@@ -40,6 +40,6 @@ class OpenCloseable(Openable, Closable, Protocol):
     pass
 ```
 
-This project contains 3 directories. It does not depend on any libraries outside of Python 3.10 native tools. You can download it, open in you IDE, try them all and pick your base on your needs and feelings.
+This project contains 3 directories. It does not depend on any libraries outside of Python 3.10 native tools. You can download it, open in you IDE, try them all and make a pick based on your needs and feelings.
 
 For development and testing I used VS Code with Pylance extension. The `pyrightconfig.json` file in this project sets the mode of the type checker (Pylance uses pyright) to `strict`. This files is used both by Pylance extension and by command-line `pyright` tool.
